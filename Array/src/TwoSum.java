@@ -12,32 +12,32 @@ public class TwoSum {
 		Map<Integer,Integer> map = new HashMap();
 
 		// Output will be returned as the array that contains solution
-        int[] output = new int[2];
+        	int[] output = new int[2];
 
-        for(int i = 0; i < nums.length; i++) {
-        	
-        	/* Checks if the map already contains the current number.
-        	 * 
-        	 * For example: if "7" is already in the map, it means a previous number 
-        	 * summed with 7 equals the target. In that case, output[0] will store 
-        	 * the index of the number that complements 7, and output[1] will store 
-        	 * the index of the current number.
-        	 */
-        	if(map.containsKey(nums[i])) {
-                output[0] = map.get(nums[i]);
-                output[1] = i;
-                return output;
-            }
-
-        	/* Stores the complement (target - current number) as key, 
-        	 * and the current index as value.
-        	 * This allows finding a match later to complete the target sum.
-        	 */
-        	map.put(target - nums[i], i);
-        	
-        }
-
-        return null;
+	        for(int i = 0; i < nums.length; i++) {
+	        	
+	        	/* Checks if the map already contains the current number.
+	        	 * 
+	        	 * For example: if "7" is already in the map, it means a previous number 
+	        	 * summed with 7 equals the target. In that case, output[0] will store 
+	        	 * the index of the number that complements 7, and output[1] will store 
+	        	 * the index of the current number.
+	        	 */
+	        	if(map.containsKey(nums[i])) {
+				output[0] = map.get(nums[i]);
+	                	output[1] = i;
+	                	return output;
+	            	}
+	
+	        	/* Stores the complement (target - current number) as key, 
+	        	 * and the current index as value.
+	        	 * This allows finding a match later to complete the target sum.
+	        	 */
+	        	map.put(target - nums[i], i);
+	        	
+	        }
+	
+	        return null;
 		
 	}
 	
