@@ -24,10 +24,10 @@ public class TwoSum {
 	        	 * the index of the current number.
 	        	 */
 	        	if(map.containsKey(nums[i])) {
-				output[0] = map.get(nums[i]);
-	                	output[1] = i;
-	                	return output;
-	            	}
+	        		output[0] = map.get(nums[i]);
+	                output[1] = i;
+	                return output;
+	            }
 	
 	        	/* Stores the complement (target - current number) as key, 
 	        	 * and the current index as value.
@@ -45,7 +45,7 @@ public class TwoSum {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Digite os números do array separadamente:");
+		System.out.println("Enter the numbers of the array separated by spaces:");
 		String[] input = sc.nextLine().split(" ");
 		int[] nums = new int[input.length];
 		
@@ -53,19 +53,18 @@ public class TwoSum {
 			nums[i] = Integer.parseInt(input[i]);
 		}
 		
-		System.out.print("Digite o valor alvo: ");
+		System.out.print("Enter the target value: ");
 		int target = sc.nextInt();
 		
 		TwoSum solver = new TwoSum();
 		int[] result = solver.twoSum(nums, target);
 		
 		if(result != null) {
-			System.out.println("Índices encontrados: [" + result[0]
-					+ ", " + result[1] + "]");
+		    System.out.println("Found indices: [" + result[0] + ", " + result[1] + "]");
 		} else {
-			System.out.println("Nenhuma combinação encontrada que some " + target);
+		    System.out.println("No combination found that sums to " + target);
 		}
-		
+
 		sc.close();
 	}
 

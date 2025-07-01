@@ -27,7 +27,7 @@ public class SearchInsertPosition {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Digite os números do array:");
+		System.out.println("Enter the numbers of the array:");
 		String[] input = sc.nextLine().split(" ");
 		int[] nums = new int[input.length];
 		
@@ -35,16 +35,16 @@ public class SearchInsertPosition {
 			nums[i] = Integer.parseInt(input[i]);
 		}
 		
-		System.out.print("Digite o valor alvo: ");
+		System.out.print("Enter the target value: ");
 		int target = sc.nextInt();
 		
 		SearchInsertPosition solver = new SearchInsertPosition();
 		int result = solver.searchInsert(nums, target);
 		
 		if (result < nums.length && nums[result] == target) {
-		    System.out.println("O número " + target + " está no array no índice " + result + ".");
+		    System.out.println("The number " + target + " is in the array at index " + result + ".");
 		} else {
-		    System.out.println("O número " + target + " não está no array, mas se estivesse estaria no índice " + result + ".");
+		    System.out.println("The number " + target + " is not in the array, but if it were, it would be at index " + result + ".");
 		}
 
 		sc.close();
