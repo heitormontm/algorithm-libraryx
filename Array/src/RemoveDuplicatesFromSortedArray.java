@@ -21,7 +21,7 @@ public class RemoveDuplicatesFromSortedArray {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Enter the numbers of the array:");
+		System.out.println("Enter the numbers of the array separated by spaces:");
 		String[] input = sc.nextLine().split(" ");
 		int[] nums = new int[input.length];
 		
