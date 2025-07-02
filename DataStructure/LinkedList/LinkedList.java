@@ -35,6 +35,13 @@ public class LinkedList {
         size++;
     }
 
+    public void addFirst(int value) {
+    	Node newNode = new Node(value);
+    	newNode.next = head;
+    	head = newNode;
+    	size++;
+    }
+    
     public void removeLast() {
         if (head == null) return; 
 
